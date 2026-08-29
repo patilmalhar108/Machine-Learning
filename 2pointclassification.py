@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 df = pd.read_csv('insurance_data.csv')
 print(df.head())
 plt.scatter(df.age, df.bought_insurance, marker = '+', color = 'red')
+plt.show()
 from sklearn.model_selection import train_test_split 
 X_train, X_test, y_train, y_test = train_test_split(df[['age']], df.bought_insurance, train_size = 0.8)
 X_test
